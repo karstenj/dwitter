@@ -13,7 +13,7 @@ function onDweetChanged() {
     return [... string].length;
   };
 
-  let characterCount = CountCharacters(this.value);
+  /*let characterCount = CountCharacters(this.value);
   charCount.textContent = characterCount + '/140';
   if (characterCount > 140) {
     $(charCount).addClass('too-long');
@@ -21,7 +21,7 @@ function onDweetChanged() {
   } else {
     $(charCount).removeClass('too-long');
     $(submitButton).prop('disabled', false);
-  }
+  }*/
 }
 
 $(document).ajaxComplete(function() {

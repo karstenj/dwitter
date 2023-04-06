@@ -5,9 +5,12 @@
   <div class=dweet >
     <div class=canvas-iframe-container-wrapper>
       <div class=canvas-iframe-container >
-        <iframe class="dweetiframe"
+        <strudel-repl>
+        <!-- {{ dweet.code }} -->
+        </strudel-repl>
+        <!--<iframe class="dweetiframe"
                 src="{% url 'fullscreen_dweet' dweet_id=dweet.id host 'dweet' %}?code={{ dweet.code|urlencode }}"
-          sandbox="allow-same-origin allow-scripts allow-downloads" id="{{ dweet.id }}"></iframe>
+          sandbox="allow-same-origin allow-scripts allow-downloads" id="{{ dweet.id }}"></iframe> -->
       </div>
     </div>
     <div class=dweet-actions>
@@ -30,8 +33,10 @@
     <span class="record-text">record</span>
     <span class="record-icon"></span>
     </button>
+      <!--
       <a class="dweet-option show-stats" href="javascript:;" target="_blank">show FPS</a>
       <a class="dweet-option hide-stats" href="javascript:;" target="_blank">hide FPS</a>
+      -->
       {% if embed %}
       <a class="dweet-option embed-dwitter-link"  href="{% url 'dweet_show' dweet_id=dweet.id %}" target="_blank">full version</a>
       {% endif %}
@@ -90,7 +95,7 @@
     </div>
     <br>
     <div class="dark-section">
-        <code class="function-wrap">function u(t) {</code>
+        <!--<code class="function-wrap">function u(t) {</code>-->
         <form action="{% url 'dweet_reply' dweet_id=dweet.id %}" method="post">
           {% csrf_token %}
           <div class=dweet-code>
@@ -101,8 +106,8 @@
               {{ dweet.posted | date:"M j Y g:i A" }} UTC
             </time>
           </p>
-          <code class="function-wrap">}// <div class=character-count>{{ dweet.dweet_length }}/140</div>
-          </code>
+          <!--<code class="function-wrap">}// <div class=character-count>{{ dweet.dweet_length }}/140</div>
+          </code>-->
       </br>
       <div class=error-display></div>
       <div class=dweet-changed>
