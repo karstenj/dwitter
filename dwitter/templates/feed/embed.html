@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 {% load compress %}
 
 <html>
@@ -33,7 +33,7 @@ ga('send', 'pageview');
         </script>
         {% endcompress %}
 
-        {% load staticfiles %}
+        {% load static %}
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
         {% compress css %}
         <link rel=stylesheet href='{% static "main.css" %}' >
@@ -48,7 +48,7 @@ ga('send', 'pageview');
         <script src="{% static "libs/embed.js" %}"></script>
         {% endcompress %}
 
-        {% load staticfiles %}
+        {% load static %}
         {% load compress %}
         {% compress js %}
         <script src="{% static "js/scrolling.js" %}"></script>

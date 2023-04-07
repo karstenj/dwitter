@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-{% load staticfiles %}
+{% load static %}
 {% load compress %}
 
 {% compress js %}
@@ -46,7 +46,7 @@
 
 {% block fullcontent %}
 
-{% load staticfiles %}
+{% load static %}
 {% load compress %}
 {% compress js %}
 <script src="{% static "js/scrolling.js" %}"></script>
