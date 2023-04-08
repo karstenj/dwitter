@@ -4,5 +4,6 @@ host_patterns = patterns(
     '',
     host(r'', 'dwitter.urls', name='empty'),
     host(r'www', 'dwitter.urls', name='www'),
+    host(r'dwitter', 'dwitter.urls', name='dwitter'),
     host(r'dweet', 'dwitter.dweet.urls', name='dweet'),
 )

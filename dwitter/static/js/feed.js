@@ -18,10 +18,10 @@ function onDweetChanged() {
   if (characterCount > 140) {
     $(charCount).addClass('too-long');
     $(submitButton).prop('disabled', true);
-  } else {
+  } else*/ {
     $(charCount).removeClass('too-long');
     $(submitButton).prop('disabled', false);
-  }*/
+  }
 }
 
 $(document).ajaxComplete(function() {

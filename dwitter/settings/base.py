@@ -12,11 +12,12 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_URL = 'https://www.dwitter.net/'
+BASE_URL = 'http://dwitter.juschus.net/'
 
-PARENT_HOST = 'dwitter.net'
+PARENT_HOST = 'juschus.net'
 
 REGISTRATION_OPEN = True        # If True, users can register
 ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = [
     'dweet.localhost',
     'localhost',
     'www.localhost',
+    'dwitter.juschus.net',
 ]
 
 
@@ -99,7 +101,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'dwitter.urls'
 
 ROOT_HOSTCONF = 'dwitter.hosts'
-DEFAULT_HOST = 'www'
+DEFAULT_HOST = 'dwitter'
 
 TEMPLATES = [
     {

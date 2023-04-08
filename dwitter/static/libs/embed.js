@@ -11,6 +11,8 @@ class Strudel extends HTMLElement {
       iframe.setAttribute('src', src);
       iframe.setAttribute('width', '600');
       iframe.setAttribute('height', '400');
+      iframe.classList.add('dweetiframe')
+      iframe.id = 'preview-iframe'
       this.appendChild(iframe);
     });
   }

@@ -1,4 +1,5 @@
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
 from registration.backends.simple.views import RegistrationView
 from django.contrib.auth import views as auth_views
@@ -58,6 +59,8 @@ urlpatterns = [
         views_v2.StatsAPI.as_view(), name='stats'),
     url(r'^apiv2beta/', include(router_v2.urls)),
 ]
+urlpatterns  +=  static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
